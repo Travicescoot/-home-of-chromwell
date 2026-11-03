@@ -3,14 +3,15 @@ import { useState } from 'react';
 const RAW_BASE = "https://raw.githubusercontent.com/Travicescoot/-home-of-chromwell/main/";
 
 const products = [
-  { id: 1, name: "Cromwell Signature Shirt", price: "TZS 45,000", img: `${RAW_BASE}IMG_7577.jpeg`, tag: "BESTSELLER" },
-  { id: 2, name: "Urban Street Tee", price: "TZS 35,000", img: `${RAW_BASE}IMG_9128.jpeg`, tag: "NEW" },
-  { id: 3, name: "Dodoma Classic Fit", price: "TZS 55,000", img: `${RAW_BASE}IMG_1780.jpeg`, tag: "LIMITED" },
-  { id: 4, name: "Cromwell Evening Wear", price: "TZS 65,000", img: `${RAW_BASE}IMG_1781.jpeg`, tag: "NEW" },
-  { id: 5, name: "Home of Cromwell Hoodie", price: "TZS 50,000", img: `${RAW_BASE}IMG_1778.jpeg`, tag: "BESTSELLER" },
-  { id: 6, name: "Street Culture Jacket", price: "TZS 75,000", img: `${RAW_BASE}18046bcf-3d63-46fb-8522-e1cb57e5ca.jpeg`, tag: "TRENDING" },
-  { id: 7, name: "Cromwell Luxe Set", price: "TZS 85,000", img: `${RAW_BASE}3483ae4f-a2f5-4510-a600-d9618e5e8.jpeg`, tag: "EXCLUSIVE" },
-  { id: 8, name: "Tanzania Pride", price: "TZS 40,000", img: `${RAW_BASE}7b0f8ce2-cab9-40d3-812b-11321acd18.jpeg`, tag: "NEW" },
+  { id: 1, name: "Cromwell Signature Shirt", price: "TZS 45,000", img: `${RAW_BASE}IMG_7577.jpeg` },
+  { id: 2, name: "Dodoma Classic Fit", price: "TZS 55,000", img: `${RAW_BASE}IMG_1780.jpeg` },
+  { id: 3, name: "Cromwell Evening Wear", price: "TZS 65,000", img: `${RAW_BASE}IMG_1781.jpeg` },
+  { id: 4, name: "Home of Cromwell Hoodie", price: "TZS 50,000", img: `${RAW_BASE}IMG_1778.jpeg` },
+  { id: 5, name: "Street Culture Jacket", price: "TZS 75,000", img: `${RAW_BASE}18046bcf-3d63-46fb-8522-e1cb57e5cae4.jpeg` },
+  { id: 6, name: "Cromwell Luxe Set", price: "TZS 85,000", img: `${RAW_BASE}3483ae4f-a2f5-4510-a600-d9618e5e86bb.jpeg` },
+  { id: 7, name: "Tanzania Pride", price: "TZS 40,000", img: `${RAW_BASE}7b0f8ce2-cab9-40d3-812b-11321acd1830.jpeg` },
+  { id: 8, name: "Urban Street Tee", price: "TZS 35,000", img: `${RAW_BASE}e7122ff2-ed34-4266-ba73-0d7979829ca1.jpeg` },
+  { id: 9, name: "Bestseller Drop", price: "TZS 60,000", img: `${RAW_BASE}f363b2c6-d190-45f2-beb2-c989b8a704f2.jpeg` },
 ];
 
 export default function App() {
