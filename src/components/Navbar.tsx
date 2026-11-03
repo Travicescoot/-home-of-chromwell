@@ -127,12 +127,12 @@ export const Navbar: React.FC<NavbarProps> = ({
             <div className="flex items-center gap-2">
               <Sparkles className="w-4 h-4 text-[#d4af37]" />
               <span className="font-serif-luxury text-2xl sm:text-3xl tracking-[0.16em] font-bold text-white uppercase">
-                CHROMEWELL
+                HOUSE OF CROMWELL
               </span>
             </div>
             <div className="flex items-center gap-1.5 -mt-1">
               <span className="text-[9px] tracking-[0.32em] text-[#d4af37] uppercase font-semibold">
-                HOME OF CHROMEWELL • DODOMA
+              HOUSE  OF CROMWELL  • DODOMA
               </span>
             </div>
           </div>
