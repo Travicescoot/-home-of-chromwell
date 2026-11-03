@@ -1,25 +1,48 @@
-import React from 'react';
+import { useState } from 'react';
+
+const RAW_BASE = "https://raw.githubusercontent.com/Travicescoot/home-of-chromwell/main/";
+
+const products = [
+  { id: 1, name: "Cromwell Signature Shirt", price: "TZS 45,000", img: `${RAW_BASE}IMG_7577.jpeg`, tag: "BESTSELLER" },
+  { id: 2, name: "Urban Street Tee", price: "TZS 35,000", img: `${RAW_BASE}IMG_9128.jpeg`, tag: "NEW" },
+  { id: 3, name: "Dodoma Classic Fit", price: "TZS 55,000", img: `${RAW_BASE}IMG_1780.jpeg`, tag: "LIMITED" },
+  { id: 4, name: "Cromwell Evening Wear", price: "TZS 65,000", img: `${RAW_BASE}IMG_1781.jpeg`, tag: "NEW" },
+  { id: 5, name: "Home of Cromwell Hoodie", price: "TZS 50,000", img: `${RAW_BASE}IMG_1778.jpeg`, tag: "BESTSELLER" },
+  { id: 6, name: "Street Culture Jacket", price: "TZS 75,000", img: `${RAW_BASE}18046bcf-3d63-46fb-8522-e1cb57e5ca.jpeg`, tag: "TRENDING" },
+  { id: 7, name: "Cromwell Luxe Set", price: "TZS 85,000", img: `${RAW_BASE}3483ae4f-a2f5-4510-a600-d9618e5e8.jpeg`, tag: "EXCLUSIVE" },
+  { id: 8, name: "Tanzania Pride", price: "TZS 40,000", img: `${RAW_BASE}7b0f8ce2-cab9-40d3-812b-11321acd18.jpeg`, tag: "NEW" },
+];
 
 export default function App() {
+  const [cart, setCart] = useState(0);
   return (
-    <div style={{background: 'black', color: 'white', minHeight: '100vh', fontFamily: 'serif'}}>
-      <nav style={{position: 'fixed', top: 0, width: '100%', padding: '20px', display: 'flex', justifyContent: 'space-between', fontSize: '11px', letterSpacing: '0.3em', background: 'rgba(0,0,0,0.5)', zIndex: 10}}>
-        <span>HOUSE OF CROMWELL</span>
-        <span style={{opacity: 0.5}}>DAR ES SALAAM</span>
+    <div className="min-h-screen bg-[#0a0a0a] text-white">
+      <nav className="sticky top-0 z-50 bg-black/90 border-b border-white/10 px-6 py-4 flex justify-between items-center">
+        <h1 className="text-xl font-black tracking-[0.3em]">HOME OF CROMWELL</h1>
+        <button className="bg-white text-black px-4 py-2 text-xs font-bold">CART ({cart})</button>
       </nav>
-      <div style={{height: '100vh', display: 'flex', alignItems: 'flex-end', padding: '40px', background: '#111'}}>
-        <div>
-          <h1 style={{fontSize: '60px', lineHeight: '0.9', margin: 0}}>HOUSE OF<br/>CROMWELL</h1>
-          <p style={{letterSpacing: '0.4em', fontSize: '12px', opacity: 0.6, marginTop: '10px'}}>ELEGANCE REDEFINED</p>
-        </div>
-      </div>
-      <div style={{padding: '20px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px', background: '#0a0a0a'}}>
-        <div style={{aspectRatio: '3/4', background: '#1a1a1a', borderRadius: '16px'}}></div>
-        <div style={{aspectRatio: '3/4', background: '#1a1a1a', borderRadius: '16px'}}></div>
-        <div style={{aspectRatio: '3/4', background: '#1a1a1a', borderRadius: '16px'}}></div>
-        <div style={{aspectRatio: '3/4', background: '#1a1a1a', borderRadius: '16px'}}></div>
-      </div>
-      <footer style={{textAlign: 'center', padding: '40px', fontSize: '10px', opacity: 0.3}}>© HOUSE OF CROMWELL</footer>
+      <header className="px-6 py-20 text-center">
+        <h2 className="text-6xl md:text-8xl font-black leading-none tracking-tighter mb-6">HOUSE<br/>OF<br/><span className="text-white/20">CROMWELL</span></h2>
+        <p className="max-w-xl mx-auto text-white/60 text-sm">Official fashion store. Designed in Dodoma, worn worldwide.</p>
+      </header>
+      <section className="px-6 pb-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+        {products.map((p) => (
+          <div key={p.id} className="bg-[#111] border border-white/10">
+            <div className="aspect-[3/4] overflow-hidden bg-[#1a1a1a] relative">
+              <img src={p.img} alt={p.name} className="w-full h-full object-cover" />
+              <div className="absolute top-3 left-3 bg-white text-black text-[10px] font-bold px-2 py-1">{p.tag}</div>
+            </div>
+            <div className="p-4">
+              <h3 className="font-bold text-sm">{p.name}</h3>
+              <div className="flex justify-between items-center mt-3">
+                <span className="text-white/70 text-sm">{p.price}</span>
+                <button onClick={() => setCart(c => c+1)} className="text-[10px] border border-white/20 px-3 py-1 hover:bg-white hover:text-black">ADD TO CART</button>
+              </div>
+            </div>
+          </div>
+        ))}
+      </section>
+      <footer className="border-t border-white/10 py-12 text-center text-[10px] tracking-[0.3em] text-white/30">© 2026 HOME OF CROMWELL • DODOMA</footer>
     </div>
-  )
+  );
 }
