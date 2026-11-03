@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const RAW_BASE = "https://raw.githubusercontent.com/Travicescoot/-home-of-chromwell/main/";
+   const RAW_BASE = "https://raw.githubusercontent.com/Travicescoot/-home-of-chromwell/main/";
 
 const products = [
   { id: 1, name: "Cromwell Signature Shirt", price: "TZS 45,000", img: `${RAW_BASE}IMG_7577.jpeg` },
