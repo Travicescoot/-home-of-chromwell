@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --gold: #c5a059;
+    --gold-light: #f3deb3;
+    --gold-bright: #d4af37;
+    --gold-dark: #9b7936;
+    --bg-dark: #07070a;
+    --bg-card: #121218;
+    --bg-card-subtle: #161622;
+  }
+
+  body {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #07070a;
+    background-image: 
+      radial-gradient(ellipse 90% 60% at 50% -10%, rgba(212, 175, 55, 0.16), transparent 60%),
+      radial-gradient(circle 600px at 0% 30%, rgba(145, 35, 60, 0.12), transparent 70%),
+      radial-gradient(circle 700px at 100% 60%, rgba(197, 160, 89, 0.10), transparent 65%),
+      radial-gradient(ellipse 80% 50% at 50% 100%, rgba(90, 45, 120, 0.08), transparent 70%);
+    background-attachment: fixed;
+    color: #f5f3ef;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, .font-serif-luxury {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Custom luxury glowing aura utilities */
+.luxury-glow {
+  box-shadow: 0 0 35px -5px rgba(197, 160, 89, 0.25);
+}
+
+.luxury-border-glow {
+  border-color: rgba(197, 160, 89, 0.4);
+  box-shadow: 0 0 15px -2px rgba(197, 160, 89, 0.15);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #f5ecd5 0%, #d4af37 50%, #aa802c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom luxury scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #09090d;
+}
+::-webkit-scrollbar-thumb {
+  background: #2b2b3a;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c5a059;
+}

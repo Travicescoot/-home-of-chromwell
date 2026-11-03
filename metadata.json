@@ -1,0 +1,6 @@
+{
+  "name": "Home of Chromwell | Luxury Women's Fashion Dodoma",
+  "description": "Dodoma's premier boutique for women's fashion, official wear, designer footwear, fine jewelry, rings, chains, perfumes, and accessories near CBE College.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
