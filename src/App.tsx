@@ -2,18 +2,12 @@ import { useState } from "react";
 const RAW_BASE = "https://raw.githubusercontent.com/Travicescoot/-home-of-chromwell/main/";
 
 // PICHA ZAKO ZOTE 10 + 15 MPYA = 25
-const OFFICIAL_25 = [
-  // --- PICHA ZAKO ZOTE ZA AWALI (10) ---
-  { name: "Cromwell Signature - Vazi Jekundu", price: "40,000 TZS", old: "55,000 TZS", img: `${RAW_BASE}IMG_7577.jpeg` },
-  { name: "Cromwell Original - 1", price: "25,000 TZS", old: "35,000 TZS", img: `${RAW_BASE}IMG_1778.jpeg` },
-  { name: "Cromwell Original - 2", price: "27,000 TZS", old: "38,000 TZS", img: `${RAW_BASE}IMG_1779.jpeg` },
-  { name: "Cromwell Original - 3", price: "25,000 TZS", old: "35,000 TZS", img: `${RAW_BASE}IMG_1780.jpeg` },
-  { name: "Cromwell Original - 4", price: "30,000 TZS", old: "42,000 TZS", img: `${RAW_BASE}IMG_1781.jpeg` },
-  { name: "Cromwell Original - 5", price: "28,000 TZS", old: "40,000 TZS", img: `${RAW_BASE}IMG_1782.jpeg` },
-  { name: "Cromwell Original - 6", price: "30,000 TZS", old: "42,000 TZS", img: `${RAW_BASE}IMG_1783.jpeg` },
-  { name: "Cromwell Original - 7", price: "26,000 TZS", old: "37,000 TZS", img: `${RAW_BASE}IMG_1784.jpeg` },
-  { name: "Cromwell Original - 8", price: "29,000 TZS", old: "41,000 TZS", img: `${RAW_BASE}IMG_1785.jpeg` },
-  { name: "Cromwell Original - 9", price: "25,000 TZS", old: "35,000 TZS", img: `${RAW_BASE}IMG_1786.jpeg` },
+  { name: "Glam Queen - New Drop", price: "27,000 TZS", old: "38,000 TZS", img: "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=600&q=80" },
+  { name: "Sweet Look - New Drop", price: "28,000 TZS", old: "40,000 TZS", img: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=600&q=80" },
+  { name: "Elegant Queen - New Drop", price: "30,000 TZS", old: "42,000 TZS", img: "https://images.unsplash.com/photo-1521577352947-9bb58764b69a?w=600&q=80" },
+  { name: "Classy Lady - New Drop", price: "26,000 TZS", old: "37,000 TZS", img: "https://images.unsplash.com/photo-1502716119720-b23a93e5fe1b?w=600&q=80" },
+  { name: "Glow Queen - New Drop", price: "29,000 TZS", old: "41,000 TZS", img: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&q=80" },
+  { name: "Fashion Diva - New Drop", price: "25,000 TZS", old: "35,000 TZS", img: "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=600&q=80" },
   // --- 15 MPYA ZA OFFICIAL - DESIGN KALI ---
   { name: "Official Queen - Black Suit", price: "30,000 TZS", old: "45,000 TZS", img: "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=600&q=80" },
   { name: "Boss Lady - White Official", price: "28,000 TZS", old: "40,000 TZS", img: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&q=80" },
